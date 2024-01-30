@@ -2,38 +2,36 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const ThoughtOfTheDay = () => {
-  const [thought, setThought] = useState('');
-  const [showModal, setShowModal] = useState(true);
+    const [thought, setThought] = useState('');
+    const [showModal, setShowModal] = useState(true); // State to manage modal visibility
 
-  useEffect(() => {
-    // Fetch a random thought from the API
-    fetchThoughtOfTheDay();
-  }, []); // The empty dependency array ensures that the effect runs only once when the component mounts
+    useEffect(() => {
+        axios.get('http://localhost:8080/thoughts/1')
+            .then(response => {
+                setThought(response.data.thought);
+            })
+            .catch(error => {
+                console.error('There was an error fetching the thought of the day:', error);
+            });
+    }, []);
 
-  const fetchThoughtOfTheDay = () => {
-    // Fetch random thought from API
-    axios.get('http://localhost:5173/api/thought-of-the-day')
-      .then(response => setThought(response.data.thought))
-      .catch(error => console.error(error));
-  };
+    const handleClose = () => {
+        setShowModal(false); // Hide the modal when the close button is clicked
+    };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
-  return (
-    <div>
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={handleCloseModal}>&times;</span>
-            <h2>Thought of the Day</h2>
-            <p>{thought}</p>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+    return (
+        <>
+            {showModal && ( // The modal will only render if showModal is true
+                <div className="modal">
+                    <div className="modal-content">
+                        <span className="close" onClick={handleClose}>&times;</span>
+                        <h1>Thought of the Day</h1>
+                        <p>{thought}</p>
+                    </div>
+                </div>
+            )}
+        </>
+    );
 };
 
 export default ThoughtOfTheDay;

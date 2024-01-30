@@ -8,10 +8,10 @@ function NavBar() {
           {/* Application name */}
           <div className="flex-1 flex items-center justify-start sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-              <a href="#" className="block lg:hidden h-8 w-auto text-white text-lg font-semibold">
+              <a href="/" className="block lg:hidden h-8 w-auto text-white text-lg font-semibold">
                 Deen Discovery
               </a>
-              <a href="#" className="hidden lg:block h-8 w-auto text-white text-lg font-semibold">
+              <a href="/" className="hidden lg:block h-8 w-auto text-white text-lg font-semibold">
                 Deen Discovery
               </a>
             </div>
@@ -21,12 +21,12 @@ function NavBar() {
           <div className="hidden sm:block sm:ml-6">
             <ul className="flex space-x-4">
               <li>
-                <a href="#" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <a href="/" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Home
                 </a>
               </li>
               <li className="group relative">
-                <a href="#" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <a href="Course" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Courses
                 </a>
                 <div className="absolute hidden bg-blue-900 text-white group-hover:block mt-2 space-y-2 py-2 rounded-md">
@@ -46,13 +46,13 @@ function NavBar() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  News
+                <a href="signup" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Signup
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Dua Search
+                <a href="Login" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  login
                 </a>
               </li>
             </ul>
