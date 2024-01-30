@@ -6,7 +6,7 @@ const ThoughtOfTheDay = () => {
     const [showModal, setShowModal] = useState(true); // State to manage modal visibility
 
     useEffect(() => {
-        axios.get('backend-url/api/thoughts/random')
+        axios.get('http://localhost:8080/thoughts/1')
             .then(response => {
                 setThought(response.data.thought);
             })

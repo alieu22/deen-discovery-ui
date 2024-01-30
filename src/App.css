@@ -1,26 +1,115 @@
 /* App.css */
 
-.modal {
+.landing-container {
+    font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: beige;
+}
+
+.hero-section {
+    background-image: url('/src/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 190px;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 18px;
+}
+
+/* Sections Styling */
+.history-section,
+.mosque-section,
+.rules-section,
+.events-section,
+.contacts-section {
+    background: wheat;
+    padding: 40px;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: calc(95% - 40px); /* 50% width for two sections, adjusted for margin */
+    box-sizing: border-box;
+}
+
+.history-section img,
+.mosque-section img,
+.rules-section img,
+.events-section img,
+.contacts-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.history-section h2,
+.mosque-section h2,
+.rules-section h2,
+.events-section h2,
+.contacts-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.history-section p,
+.mosque-section p,
+.rules-section p,
+.events-section p,
+.contacts-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Links Styling */
+.contacts-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contacts-section a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
     position: fixed;
     z-index: 1;
-    left: 1;
+    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* You can adjust the width as per your requirement */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .close-button {
@@ -35,4 +124,97 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* auth.css */
+body {
+    background-color: darkgreen;
+    background-image: url('/src/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+.auth-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.auth-page h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.auth-page p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.auth-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-page input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.auth-page button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-page button:hover {
+    background-color: #0056b3;
+}
+
+.auth-page a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-page a:hover {
+    text-decoration: underline;
+}
+
+/* CoursePage */
+.course-page {
+    padding: 20px;
+    color: #fff;
+}
+
+.featured-courses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-details {
+    padding: 10px;
 }
