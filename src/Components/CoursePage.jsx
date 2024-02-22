@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // CoursePage.jsx
 import React from 'react';
 import NavBar from './Navbar';

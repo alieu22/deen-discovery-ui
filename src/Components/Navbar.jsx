@@ -25,6 +25,11 @@ function NavBar() {
                   Home
                 </a>
               </li>
+              <li>
+                <a href="Dashboard" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Dashboard
+                </a>
+              </li>
               <li className="group relative">
                 <a href="Course" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Courses
@@ -41,18 +46,13 @@ function NavBar() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Fiqh
-                </a>
-              </li>
-              <li>
                 <a href="signup" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Signup
+                  Register
                 </a>
               </li>
               <li>
                 <a href="Login" className="text-gray-300 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  login
+                  Login
                 </a>
               </li>
             </ul>

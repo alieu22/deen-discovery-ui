@@ -1,16 +1,16 @@
-// LoginPage.jsx
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import NavBar from './Navbar';
 import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
-  // State to store form data
   const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
 
-  // Function to handle form field changes
+  const [loginStatus, setLoginStatus] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -19,7 +19,6 @@ const LoginPage = () => {
     }));
   };
 
-  // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -36,12 +35,15 @@ const LoginPage = () => {
       if (response.ok) {
         // Handle successful login (e.g., redirect to dashboard)
         console.log('Login successful');
+        setLoginStatus('Login successful!'); // Set success message
       } else {
         // Handle login failure (e.g., show error message)
         console.error('Login failed');
+        setLoginStatus('Login failed. Please check your credentials.'); // Set error message
       }
     } catch (error) {
       console.error('Error during login:', error);
+      setLoginStatus('Login failed. Please try again.'); // Set error message
     }
   };
 
@@ -68,9 +70,10 @@ const LoginPage = () => {
             onChange={handleChange}
           />
           <button type="submit">Submit</button>
+          {loginStatus && <p>{loginStatus}</p>}
         </form>
         <p>
-          Dont have an account? <Link to="/signup">Register</Link>
+          Don't have an account? <Link to="/signup">Register</Link>
         </p>
       </div>
     </>

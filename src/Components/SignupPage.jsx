@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import NavBar from './Navbar';
 import { Link } from "react-router-dom";
@@ -8,8 +9,11 @@ const SignupPage = () => {
     lastName: '',
     email: '',
     username: '',
-    password: ''
+    password: '',
+    role: 'USER', // Default role is set to 'USER'
   });
+
+  const [registrationStatus, setRegistrationStatus] = useState('');
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -31,9 +35,11 @@ const SignupPage = () => {
     .then(data => {
       // Handle the response data as needed
       console.log('Success:', data);
+      setRegistrationStatus('Registration successful!'); // Set success message
     })
     .catch((error) => {
       console.error('Error:', error);
+      setRegistrationStatus('Registration failed. Please try again.'); // Set error message
     });
   };
 
@@ -50,7 +56,18 @@ const SignupPage = () => {
           <input type="text" placeholder="Email" name="email" onChange={handleChange} />
           <input type="text" placeholder="Username" name="username" onChange={handleChange} />
           <input type="password" placeholder="Password" name="password" onChange={handleChange} />
+
+          {/* Add role selection (dropdown or radio buttons) */}
+          <label>
+            Role:
+            <select name="role" value={user.role} onChange={handleChange}>
+              <option value="USER">User</option>
+              <option value="ADMIN">Admin</option>
+            </select>
+          </label>
+
           <button type="submit">Register</button>
+          {registrationStatus && <p>{registrationStatus}</p>}
           <p>Already have an account? <Link to="/login">login</Link></p>
         </form>
       </div>

@@ -218,3 +218,128 @@ body {
 .course-details {
     padding: 10px;
 }
+
+/* Dashboard.css */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.left-panel,
+.right-panel {
+    width: 45%;
+    margin: 10px;
+}
+
+.prayer-times-section,
+.announcements-section,
+.masjid-details-section,
+.location-section {
+    background-color: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-times-list,
+.announcements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.prayer-times-list li,
+.announcements-list li {
+    margin: 10px 0;
+}
+
+.next-iqamah {
+    color: #e44d26;
+    /* Orange color for next Iqamah */
+}
+
+.location-section {
+    background-color: #c2e0c6;
+    /* Light green for user location */
+}
+
+.masjid-details-section {
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-section {
+    background-color: #dce4f1;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styling for the entire dashboard */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.landing-container {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: beige;
+    padding: 20px;
+}
+
+.hero-section {
+    background-image: url('/src/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 18px;
+}
+
+/* ... (other styles) */
+
+.history-section,
+.mosque-section,
+.rules-section,
+.events-section,
+.contacts-section,
+.qibla-direction-section,
+.Islamic-Days-section,
+.featured-categories-section {
+    background: wheat;
+    padding: 40px;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 100px;
+    width: calc(95% - 40px);
+    box-sizing: border-box;
+}
