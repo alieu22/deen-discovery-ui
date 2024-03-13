@@ -26,10 +26,9 @@ const LandingPage = () => {
         </section>
 
         <section className="history-section">
-          <h2>HISTORY</h2>
+          <h2>ABOUT US</h2>
           <p>
-            In or about the year 570, the child who would be named Muhammad and who would become the Prophet of one of the world great religions, Islam, was born into a family belonging to a clan of Quraysh, the ruling tribe of Mecca, a city in the Hijaz region of northwestern Arabia.
-          </p>
+          In today’s generation, Muslims often struggle to find reliable and accessible resources to learn about their faith. Existing platforms may lack interactivity, cultural sensitivity, or the depth of content necessary for effective learning and growth. The Idea for this app to have a one stop for everything a Muslim needs to know about Islam and how to better themselves. The app addresses these gaps by offering a rich, interactive learning platform. It combines authoritative content, innovative teaching methods, and a user-friendly interface to create a unique educational experience. Our app features interactive courses, daily inspirations, quizzes, and community forums, all tailored to foster a deeper understanding of Islam. When thinking about marketing for the app their is a vast population of Muslims in the world and Islam is the fastest and largest growing religion to date.           </p>
           <img src={masjidImage} alt="Masjid" />
             <img src={masjid1Image} alt="Masjid1" />
 

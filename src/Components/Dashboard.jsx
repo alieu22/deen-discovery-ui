@@ -3,9 +3,9 @@
 import React, { useEffect } from 'react';
 import NavBar from './Navbar';
 import ThoughtOfTheDay from './ThoughtOfTheDay';
-import QiblaDirection from './QiblaDirection'; // Assuming you have this component
-//import PrayerLog from './PrayerLog'; // Assuming you have this component
-//import FeaturedCategories from './FeaturedCategories'; // Assuming you have this component
+import QiblaDirection from './QiblaCompassPage'; 
+import CoursePage from './CoursePage';
+import DiscussionForum from './DiscussionForum'; // Import DiscussionForum component
 
 const Dashboard = () => {
   useEffect(() => {
@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <NavBar />
+       <NavBar isLoggedIn={true} />
       <div className="landing-container">
         <section className="hero-section">
           <div className="hero-content">
@@ -22,7 +22,12 @@ const Dashboard = () => {
             <p>Discover knowledge and wisdom for your spiritual journey.</p>
           </div>
         </section>
-
+        <section className="featured-categories-section">
+          <CoursePage isLoggedIn={true} onLogout={() => {}} />
+        </section>
+        <section className="discussion-forum-section">
+          <DiscussionForum />
+        </section>
         <section className="history-section">
           <div className= "prayer-time">
             <h2>Prayer Time</h2>
@@ -54,8 +59,7 @@ const Dashboard = () => {
           src="https://www.islamicfinder.org/specialislamicdays"> </iframe>
         </section>
 
-        <section className="featured-categories-section">
-        </section>
+
 
         <ThoughtOfTheDay />
       </div>
